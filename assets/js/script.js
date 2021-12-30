@@ -46,14 +46,28 @@ function generatePassword() {
   }
 
   // require user to define password perameters
-  var charSpecial = acknowledge("Add special characters?");
-  var charNumbers = acknowledge("Add numbers?");
-  var charUppercase = acknowledge("Add upper case letters?");
-  var charLowercase = acknowledge("Add lower case letters?");
+  var charSpecial = confirm("Add special characters?");
+  var charNumbers = confirm("Add numbers?");
+  var charUppercase = confirm("Add upper case letters?");
+  var charLowercase = confirm("Add lower case letters?");
   
   if(!charSpecial&&!charNumbers&&!charUppercase&&!charLowercase) {
     window.alert("You must select an option!");
     return generatePassword()
+  }
+
+  // insert if statement for defined variables
+  if(special) {
+    idenCharacters = special
+  }
+  else if(numbers) {
+    idenCharacters = numbers 
+  }
+  else if(upper) {
+    idenCharacters = upper
+  }
+  else if(lower) {
+    idenCharacters = lower
   }
 
 }
