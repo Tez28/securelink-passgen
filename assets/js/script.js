@@ -18,11 +18,30 @@ function writePassword() {
 }
 debugger;
 // write genereate password function
-function generatePassword() {
-  var password = generatePassword;
+function createPassword() {
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
   
   passwordText.value = password;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Insert generate password call
+function generatePassword() {
+  
+  //insert idenCharacter for randomizing
+  var result = "";
+
+  // insert window for password length
+  var length = window.prompt("Please select between 8 and 16 chaacters for your password!");
+  if(password === "" || password === null) {
+    window.alert("You're required to select 8 or 12! Please try again.");
+    return generatePassword()
+  }
+
+  if(length < 8 || length > 16) {
+    window.alert("Please try again. Input 8 or 16.")
+  }
+
+}
