@@ -44,4 +44,15 @@ function generatePassword() {
     window.alert("Please try again. Input 8 or 16.")
   }
 
+  // require user to define password perameters
+  var charSpecial = acknowledge("Add special characters?");
+  var charNumbers = acknowledge("Add numbers?");
+  var charUppercase = acknowledge("Add upper case letters?");
+  var charLowercase = acknowledge("Add lower case letters?");
+  
+  if(!charSpecial&&!charNumbers&&!charUppercase&&!charLowercase) {
+    window.alert("You must select an option!");
+    return generatePassword()
+  }
+
 }
