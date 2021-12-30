@@ -58,20 +58,20 @@ function generatePassword() {
 
     // insert if statement for defined variables
     if(special) {
-    idenCharacters = special
+    idenCharacters += special
   }
   else if(numbers) {
-    idenCharacters = numbers 
+    idenCharacters += numbers 
   }
   else if(upper) {
-    idenCharacters = upper
+    idenCharacters += upper
   }
   else if(lower) {
-    idenCharacters = lower
+    idenCharacters += lower
   }
 
 // enter math function
-for (var i = 0; i <length; i++) {
+for (var i = 0; i < length; i++) {
   result = idenCharacters.charAt(Math.floor(Math.random() * idenCharacters.length));
 }
 return result;
