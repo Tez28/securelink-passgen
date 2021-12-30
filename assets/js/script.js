@@ -70,7 +70,9 @@ function generatePassword() {
     idenCharacters = lower
   }
 
-
+// enter math function
+for (var i = 0; i <length; i++) {
+  result = idenCharacters.charAt(Math.floor(Math.random() * idenCharacters.length));
 }
-
+return result;
 }
