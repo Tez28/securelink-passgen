@@ -42,6 +42,7 @@ function generatePassword() {
 
   if(length < 8 || length > 16) {
     window.alert("Please try again. Input 8 or 16.")
+    return generatePassword()
   }
 
   // require user to define password perameters
