@@ -55,18 +55,5 @@ function generatePassword() {
     window.alert("You must select an option!");
     return generatePassword()
   }
-    // insert if statement for defined variables
-    if(special) {
-      idenCharacters = special
-    }
-    else if(numbers) {
-      idenCharacters = numbers 
-    }
-    else if(upper) {
-      idenCharacters = upper
-    }
-    else if(lower) {
-      idenCharacters = lower
-    }
+ 
   
-  }
