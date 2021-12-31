@@ -51,19 +51,24 @@ function generatePassword() {
   var charUppercase = confirm("Add upper case letters?");
   var charLowercase = confirm("Add lower case letters?");
   
-  if(!charSpecial&&!charNumbers&&!charUppercase&&!charLowercase) {
+  if(charSpecial&&charNumbers&&charUppercase&&charLowercase) {
     window.alert("You must select an option!");
     return generatePassword()
   }
 
   // insert if statement for defined variables
   if(charSpecialconfirm) {
-    } else if(charNumbersconfirm) { 
-    generatePassword();
-    } else if(upper) {
-    generatePassword();
-    } else if(lower) {
-    generatePassword();
+    idenCharacters += special
+  }
+
+  if(charNumbersconfirm) {
+    idenCharacters += numbers
+  }
+  if(charUpperconfirm) {
+    idenCharacters += upper
+  }
+  if(charLowerconfirm) {
+    idenCharacters += lower
   }
 
 // enter math function
