@@ -83,14 +83,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
-// debugger;
-// write genereate password function
-// function createPassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-  
-//   passwordText.value = password;
-// }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -101,10 +94,10 @@ function generatePassword() {
   var idenCharacters = [""];
 
   // insert window for password length
-  var length = window.prompt("Please select between 8 and 16 chaacters for your password!");
+  var length = window.prompt("Please select between 8 and 128 chaacters for your password!");
 
-  if(length < 8 || length > 16) {
-    window.alert("Please try again. Input 8 or 16.")
+  if(length < 8 || length > 128) {
+    window.alert("Please try again. Input 8 or 128.")
     generatePassword()
   }
   
