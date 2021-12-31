@@ -2,11 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 
 // define variables
-var special = "!@#$%^&*(";
-var numbers = "123456789";
-var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lower = "abcdefghijklmnopqrstuvwxyz";
-var idenCharacters = "";
+var special = ["!@#$%^&*("];
+var numbers = ["123456789"];
+var upper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var lower = ["abcdefghijklmnopqrstuvwxyz"];
+// var idenCharacters = "";
 
 // Write password to the #password input
 function writePassword() {
@@ -16,14 +16,14 @@ function writePassword() {
   passwordText.value = password;
 
 }
-debugger;
+// debugger;
 // write genereate password function
-function createPassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function createPassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
   
-  passwordText.value = password;
-}
+//   passwordText.value = password;
+// }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -31,36 +31,56 @@ generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
   
   //insert idenCharacter for randomizing
-  var result = "";
+  var idenCharacters = [""];
 
   // insert window for password length
   var length = window.prompt("Please select between 8 and 16 chaacters for your password!");
-  if(password === "" || password === null) {
-    window.alert("You're required to select 8 or 12! Please try again.");
-    return generatePassword()
-  }
 
   if(length < 8 || length > 16) {
     window.alert("Please try again. Input 8 or 16.")
-    return generatePassword()
+    generatePassword()
   }
 
-  // require user to define password perameters
-  var charSpecial = confirm("Add special characters?");
-  var charNumbers = confirm("Add numbers?");
-  var charUppercase = confirm("Add upper case letters?");
-  var charLowercase = confirm("Add lower case letters?");
   
+  // insert if statements for defined variables
+  var charSpecial = confirm("Add special characters?");
+
+  if (charSpecial) {
+    idenCharacters += special;
+  }
+  console.log (idenCharacters)
+
+  var charNumbers = confirm("Add numbers?");
+
+  if (charNumbers) {
+    idenCharacters += numbers;
+  }
+  console.log (idenCharacters)
+
+  var charUppercase = confirm("Add upper case letters?");
+  if (charUppercase) {
+    idenCharacters += upper;
+  }
+  console.log (idenCharacters)
+
+  var charLowercase = confirm("Add lower case letters?");
+  if (Lowercase) {
+    idenCharacters += lower
+  }
+  console.log (idenCharacters)
+  
+  // require user to define password perameters
   if(!charSpecial&&!charNumbers&&!charUppercase&&!charLowercase) {
     window.alert("You must select an option!");
-    return generatePassword()
+    generatePassword()
   }
 
-  // insert if statement for defined variables
+
+
 
 // enter math function
-for (var i = 0; i < length; i++) {
-  result += idenCharacters.charAt(Math.floor(Math.random() * idenCharacters.length));
-}
-return result;
+  for (var i = 0; i < length; i++) {
+    result += idenCharacters.charAt(Math.floor(Math.random() * idenCharacters.length));
+  }
+return idenCharacters;
 }
