@@ -107,7 +107,6 @@ function generatePassword() {
     window.alert("Please try again. Input 8 or 16.")
     generatePassword()
   }
-
   
   // insert if statements for defined variables
   var charSpecial = confirm("Add special characters?");
@@ -118,7 +117,6 @@ function generatePassword() {
   console.log(idenCharacters)
 
   var charNumbers = confirm("Add numbers?");
-
   if (charNumbers) {
     idenCharacters = idenCharacters + numbers.join("");
   }
@@ -143,11 +141,11 @@ function generatePassword() {
   }
 
 
-
+var password = ""
 
 // enter math function
   for (var i = 0; i < length; i++) {
-    result += idenCharacters.charAt(Math.floor(Math.random() * idenCharacters.length));
+    password = password + idenCharacters [(Math.floor(Math.random() * idenCharacters.length))];
   }
-return idenCharacters;
+return password;
 }
