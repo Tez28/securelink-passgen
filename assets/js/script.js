@@ -59,14 +59,11 @@ function generatePassword() {
   // insert if statement for defined variables
   if(special) {
   idenCharacters += special
-  }
-  if(numbers) {
+  }else if(numbers) {
     idenCharacters += numbers 
-  }
-  if(upper) {
+  }else if(upper) {
     idenCharacters += upper
-  }
-  else if(lower) {
+  }else if(lower) {
     idenCharacters += lower
   }
 
@@ -75,4 +72,4 @@ for (var i = 0; i < length; i++) {
   result += idenCharacters.charAt(Math.floor(Math.random() * idenCharacters.length));
 }
 return result;
-}
+};
