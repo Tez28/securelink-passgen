@@ -2,10 +2,77 @@
 var generateBtn = document.querySelector("#generate");
 
 // define variables
-var special = ["!@#$%^&*("];
-var numbers = ["123456789"];
-var upper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var lower = ["abcdefghijklmnopqrstuvwxyz"];
+const special = ["!",
+"@",
+"#",
+"$",
+"%",
+"^",
+"&",
+"*",
+"("];
+const numbers = ["1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9"];
+const upper = ["A",
+"B",
+"C",
+"D",
+"E",
+"F",
+"G",
+"H",
+"I",
+"J",
+"K",
+"L",
+"M",
+"N",
+"O",
+"P",
+"Q",
+"R",
+"S",
+"T",
+"U",
+"V",
+"W",
+"X",
+"Y",
+"Z"];
+
+const lower = ["a",
+"b",
+"c",
+"d",
+"e",
+"f",
+"g",
+"h",
+"i",
+"j",
+"k",
+"l",
+"m",
+"n",
+"o",
+"p",
+"q",
+"r",
+"s",
+"t",
+"u",
+"v",
+"w",
+"x",
+"y",
+"z"];
 // var idenCharacters = "";
 
 // Write password to the #password input
@@ -46,28 +113,28 @@ function generatePassword() {
   var charSpecial = confirm("Add special characters?");
 
   if (charSpecial) {
-    idenCharacters += special;
+    idenCharacters = idenCharacters + special.join("");
   }
-  console.log (idenCharacters)
+  console.log(idenCharacters)
 
   var charNumbers = confirm("Add numbers?");
 
   if (charNumbers) {
-    idenCharacters += numbers;
+    idenCharacters = idenCharacters + numbers.join("");
   }
-  console.log (idenCharacters)
+  console.log(idenCharacters)
 
   var charUppercase = confirm("Add upper case letters?");
   if (charUppercase) {
-    idenCharacters += upper;
+    idenCharacters = idenCharacters + upper.join("");
   }
-  console.log (idenCharacters)
+  console.log(idenCharacters)
 
   var charLowercase = confirm("Add lower case letters?");
-  if (Lowercase) {
-    idenCharacters += lower
+  if (charLowercase) {
+    idenCharacters = idenCharacters + lower.join("")
   }
-  console.log (idenCharacters)
+  console.log(idenCharacters)
   
   // require user to define password perameters
   if(!charSpecial&&!charNumbers&&!charUppercase&&!charLowercase) {
