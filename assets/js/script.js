@@ -57,14 +57,13 @@ function generatePassword() {
   }
 
   // insert if statement for defined variables
-  if(special) {
-  idenCharacters += special
-  } else if(numbers) {
-    idenCharacters += numbers 
-  } else if(upper) {
-    idenCharacters += upper
-  } else if(lower) {
-    idenCharacters += lower
+  if(charSpecialconfirm) {
+    } else if(charNumbersconfirm) { 
+    generatePassword();
+    } else if(upper) {
+    generatePassword();
+    } else if(lower) {
+    generatePassword();
   }
 
 // enter math function
