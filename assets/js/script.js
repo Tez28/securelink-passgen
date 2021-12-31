@@ -59,11 +59,11 @@ function generatePassword() {
   // insert if statement for defined variables
   if(special) {
   idenCharacters += special
-  }else if(numbers) {
+  } else if(numbers) {
     idenCharacters += numbers 
-  }else if(upper) {
+  } else if(upper) {
     idenCharacters += upper
-  }else if(lower) {
+  } else if(lower) {
     idenCharacters += lower
   }
 
